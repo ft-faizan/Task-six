@@ -150,18 +150,21 @@ body {
 
 /* CONTENT */
 .drawer-content {
-  padding: 10px 15px;
+ padding: 50px 15px;
     opacity: 0;
     transition: opacity 0.2s ease;
     /* background: yellow; */
-    height: auto;
-    min-height: 80vh;
+    height: 75vh;
+    /* min-height: 80vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* padding-top: 55px; */
+    overflow-y: scroll;
 }
-
+.drawer-content::-webkit-scrollbar{
+  display: none;width: 0px;
+}
 .drawer.open .drawer-content {
   opacity: 1;
 }
@@ -182,7 +185,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: auto; 
-  min-height: 16vh;
+  min-height: 14vh;
   display: flex;
     justify-content: space-between;
     align-items: center;
@@ -510,6 +513,7 @@ body {
   .drawer .drawer-icons {
     display: flex;
   }
+ 
 }
 
 .progress {

@@ -570,6 +570,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // filter logic ends
   // this the animation count ing function from ai part starts
   function animateCount(element, target) {
+    if (!element) return;
+    // if target is zero or negative, set immediately and avoid division by zero
+    if (!target || target <= 0) {
+      element.textContent = 0;
+      return;
+    }
+
     let start = 0;
     const duration = 300;
     const stepTime = Math.max(Math.floor(duration / target), 20);
